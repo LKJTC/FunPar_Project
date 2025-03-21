@@ -1,3 +1,6 @@
+use rayon::iter::IntoParallelRefIterator;
+use rayon::prelude::*;
+use std::fs;
 use std::fs::File;
 use std::path::{Path, PathBuf};
 use image::io::Reader as ImageReader;
@@ -41,4 +44,12 @@ fn folder(source: &Path, dest: &Path, quality: u8) {
         }
     });
     println!("Reached here");
+}
+
+fn main() {
+    let source = PathBuf::from("source_dir");
+    let destination = PathBuf::from("dest_dir");
+    let quality = 80;
+    
+    folder(&source, &destination, quality);
 }
