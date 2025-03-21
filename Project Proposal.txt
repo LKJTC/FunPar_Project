@@ -1,0 +1,66 @@
+Image processing program  
+**Language: Rust**  
+
+**Objective**  
+The objective of this project is to develop a comprehensive suite of image processing tools that leverage the power of parallel computing in Rust. This suite will include advanced features such as image filtering, compression, and segmentation, with each component designed to optimize performance and efficiency.  
+
+---  
+
+**Image Filtering Feature (Dave)**  
+
+**Objective:**  
+We plan to verify that the filters produce the output that we desire without fault, all the while maintaining the adequate processing speed and memory consumption. We will put it to the test via metrics like the PSNR (Peak Signal-to-Noise Ratio) for reliability.  
+
+**Implementation:**  
+We will achieve this by doing two things:  
+1. Blur the image using the Gaussian blur technique to smooth the image.  
+2. Sharpen the image using a kernel to make the processed image more defined and devoid of faults.  
+
+**Success Measurement:**  
+- The effectiveness and speed of the program.  
+
+---  
+
+**Parallel Image Compression Tool (Dave and Krit)**  
+
+**Objective:**  
+We plan to create a tool to compress multiple images in parallel, improving the speed and efficiency of processing large batches of images. This tool will convert various image formats to JPEG and compress them to a specified quality level.  
+
+**Implementation:**  
+Our program will have two functions:  
+1. **Single Image Compression** - Handles the compression of a single image by reading, processing, and saving it as a JPEG file with a given quality.  
+2. **Batch Processing** - Manages the compression of multiple images in parallel, utilizing threads to apply the compression function to each image in a directory.  
+
+**Success Measurement:**  
+- Compression Speed  
+- Resource Efficiency  
+- Output Quality  
+
+---  
+
+**Parallel K-Means Clustering for Image Segmentation (Krit)**  
+
+**Objective:**  
+We plan to develop a fast and efficient image segmentation tool using a parallel K-Means clustering algorithm in Rust. This tool will segment images into meaningful clusters based on pixel colors.  
+
+**Implementation:**  
+- Utilize **Rayon** for parallel computation.  
+- Use **ndarray** for managing numerical data.  
+- Handle image data with the **image crate** to load and manipulate images.  
+
+**Success Measurement:**  
+- Performance Improvement  
+- Accuracy of Segmentation  
+- Scalability  
+
+---  
+
+**Challenges & Considerations**  
+- Managing computational overhead to ensure real-time processing capabilities.  
+- Optimizing memory usage when handling high-resolution images.  
+- Selecting efficient parallelization strategies to maximize system responsiveness and minimize latency.  
+
+---  
+
+**Conclusion**  
+This project aims to push the boundaries of image processing capabilities using Rust's concurrent features. By integrating sophisticated image manipulation techniques with parallel computing principles, we anticipate showcasing significant improvements in processing speeds, efficiency, and the ability to handle large-scale image data.  
