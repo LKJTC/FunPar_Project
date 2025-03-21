@@ -47,9 +47,11 @@ fn folder(source: &Path, dest: &Path, quality: u8) {
 }
 
 fn main() {
-    let source = PathBuf::from("source_dir");
-    let destination = PathBuf::from("dest_dir");
+    /*
+    let source = PathBuf::from("");
+    let destination = PathBuf::from("");
     let quality = 80;
     
     folder(&source, &destination, quality);
+    */
 }
